@@ -22,7 +22,7 @@ def get_args():
     parser.add_argument('--data', default='data_asg4/prepared_data', help='path to data directory')
     parser.add_argument('--source-lang', default='fr', help='source language')
     parser.add_argument('--target-lang', default='en', help='target language')
-    parser.add_argument('--max-tokens', default=None, type=int, help='maximum number of tokens in a batch')
+    parser.add_argument('--max-tokens', default=28, type=int, help='maximum number of tokens in a batch')
     parser.add_argument('--batch-size', default=1, type=int, help='maximum number of sentences in a batch')
     parser.add_argument('--train-on-tiny', action='store_true', help='train model on a tiny dataset')
 
@@ -32,8 +32,8 @@ def get_args():
     # Add optimization arguments
     parser.add_argument('--max-epoch', default=10000, type=int, help='force stop training at specified epoch')
     parser.add_argument('--clip-norm', default=4.0, type=float, help='clip threshold of gradients')
-    parser.add_argument('--lr', default=0.0003, type=float, help='learning rate')
-    parser.add_argument('--patience', default=3, type=int,
+    parser.add_argument('--lr', default=0.0005, type=float, help='learning rate')
+    parser.add_argument('--patience', default=2, type=int,
                         help='number of epochs without improvement on validation set before early stopping')
 
     # Add checkpoint arguments
